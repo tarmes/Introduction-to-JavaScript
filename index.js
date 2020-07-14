@@ -43,7 +43,7 @@ function dogAge(age){
   return age / 7;
 }
 
-console.log(Math.round(dogAge(26)))
+console.log(Math.round(dogAge(26)));
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
@@ -88,7 +88,7 @@ function dogFood(weight, age){
   }
 }
 
-console.log(dogFood(15, 1))
+console.log(dogFood(15, 1));
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
@@ -97,8 +97,41 @@ console.log(dogFood(15, 1))
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
+var oppChoice = Math.random();
 
+function game(choice){
+  if (oppChoice <=.33 && choice === "rock"){
+  return "tie";
+  }
+  else if (oppChoice <=.66 && choice === "rock"){
+  return "loss";
+  }
+  else if (oppChoice <=1 && choice === "rock"){
+  return "win";
+  }
 
+  if (oppChoice <=.33 && choice === "paper"){
+  return "win";
+  }
+  else if (oppChoice <=.66 && choice === "paper"){
+  return "tie";
+  }
+  else if (oppChoice <=1 && choice === "paper"){
+  return "loss";
+  }
+
+  if (oppChoice <=.33 && choice === "scissors"){
+  return "loss";
+  }
+  else if (oppChoice <=.66 && choice === "scissors"){
+  return "win";
+  }
+  else if (oppChoice <=1 && choice === "scissors"){
+  return "tie";
+  }
+}
+
+console.log(game("paper"));
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
