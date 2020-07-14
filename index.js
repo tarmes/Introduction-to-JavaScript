@@ -137,21 +137,33 @@ console.log(game("paper"));
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
+function metCon(distance){
+  return distance * .62137;
+}
 
-
-
+console.log(metCon(1000));
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
 
+function asCon(distance){
+  return distance * 30.48;
+}
 
-
-
+console.log(asCon(10));
 
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
 
+function annoyingSong(bottles){
+  for (bottles; bottles > 0; bottles--) {
+  console.log(bottles);
+}
+}
+console.log(annoyingSong(42));
+
+console.log(annoyingSong(42)" bottles of soda on the wall, "annoyingSong(42)" bottles of soda, take one down pass it around, "annoyingSong(42)" bottles of soda on the wall");
 
 
 
@@ -165,9 +177,25 @@ console.log(game("paper"));
 //60s should be D
 //and anything below 60 should be F
 
+function grade(score){
+  if (score < 60) {
+    return "F";
+  }
+  else if (score < 70) {
+    return "D";
+  }
+  else if (score < 80) {
+    return "C";
+  }
+  else if (score < 90) {
+    return "B";
+  }
+  else if (score < 100) {
+    return "A";
+  }
+}
 
-
-
+console.log(grade(68));
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
