@@ -43,7 +43,7 @@ function dogAge(age){
   return age / 7;
 }
 
-console.log(dogAge(26))
+console.log(Math.round(dogAge(26)))
 
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
@@ -63,9 +63,32 @@ console.log(dogAge(26))
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
+function dogFood(weight, age){
+  if (age <= 1/3) {
+    return weight * .1;
+  }
+  else if (age <= 7/12) {
+    return weight * .05 ;
+  }
+  else if (age < 1) {
+    return weight * .04;
+  }
 
+  if (age >= 1 && weight <= 5){
+    return weight * .05;
+  }
+  else if (age >= 1 && weight <= 10){
+    return weight * .04;
+  }
+  else if (age >= 1 && weight <= 15){
+    return weight * .03;
+  }
+  else if (age >= 1 && weight > 15){
+    return weight * .02;
+  }
+}
 
-
+console.log(dogFood(15, 1))
 
 /************************************************************** Task 4 **************************************************************/
 // Rock, Paper, Sissors
