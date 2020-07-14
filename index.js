@@ -158,15 +158,11 @@ console.log(asCon(10));
 
 function annoyingSong(bottles){
   for (bottles; bottles > 0; bottles--) {
-  console.log(bottles);
+  console.log(`${bottles} bottles of soda on the wall, ${bottles} bottles of soda, take one down pass it around, ${bottles} bottles of soda on the wall`);
 }
 }
+
 console.log(annoyingSong(42));
-
-console.log(annoyingSong(42)" bottles of soda on the wall, "annoyingSong(42)" bottles of soda, take one down pass it around, "annoyingSong(42)" bottles of soda on the wall");
-
-
-
 
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
@@ -202,10 +198,59 @@ console.log(grade(68));
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
 
+const vowels = ["a", "e", "i", "o", "u"]
 
+function vowelAmount(text) {
+  let counter = 0;
 
+  for (let letter of text.toLowerCase()) {
+    if (vowels.includes(letter)) {
+      counter ++;
+    }
+  }
+  return counter;
+}
 
+console.log(vowelAmount("text"))
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+var choice = prompt("rock, paper, scissors?");
+
+var oppChoice = Math.random();
+
+function game(choice){
+  if (oppChoice <=.33 && choice === "rock"){
+  return "tie";
+  }
+  else if (oppChoice <=.66 && choice === "rock"){
+  return "loss";
+  }
+  else if (oppChoice <=1 && choice === "rock"){
+  return "win";
+  }
+
+  if (oppChoice <=.33 && choice === "paper"){
+  return "win";
+  }
+  else if (oppChoice <=.66 && choice === "paper"){
+  return "tie";
+  }
+  else if (oppChoice <=1 && choice === "paper"){
+  return "loss";
+  }
+
+  if (oppChoice <=.33 && choice === "scissors"){
+  return "loss";
+  }
+  else if (oppChoice <=.66 && choice === "scissors"){
+  return "win";
+  }
+  else if (oppChoice <=1 && choice === "scissors"){
+  return "tie";
+  }
+}
+
+console.log(game(choice));
